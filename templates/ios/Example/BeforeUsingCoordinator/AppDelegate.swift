@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  BeforeUsingCoordinator
+//  PROJECT
 //
 //  Created by Marcello Chuahy on 02/02/20.
 //  Copyright © 2020 Applause Codes. All rights reserved.

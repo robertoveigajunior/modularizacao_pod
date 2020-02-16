@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5F1B9A1123E9E7F60033B2F3 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
-		5F91073823E716A300697490 /* BeforeUsingCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeforeUsingCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F91073823E716A300697490 /* PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F91073B23E716A300697490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F91073F23E716A300697490 /* VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
 		5F91074423E716B100697490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		5F91072F23E716A300697490 = {
 			isa = PBXGroup;
 			children = (
-				5F91073A23E716A300697490 /* BeforeUsingCoordinator */,
+				5F91073A23E716A300697490 /* PROJECT */,
 				5F91073923E716A300697490 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		5F91073923E716A300697490 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F91073823E716A300697490 /* BeforeUsingCoordinator.app */,
+				5F91073823E716A300697490 /* PROJECT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5F91073A23E716A300697490 /* BeforeUsingCoordinator */ = {
+		5F91073A23E716A300697490 /* PROJECT */ = {
 			isa = PBXGroup;
 			children = (
 				5F91074623E716B100697490 /* LaunchScreen.storyboard */,
@@ -64,7 +64,7 @@
 				5F91074423E716B100697490 /* Assets.xcassets */,
 				5F91074923E716B100697490 /* Info.plist */,
 			);
-			path = BeforeUsingCoordinator;
+			path = PROJECT;
 			sourceTree = "<group>";
 		};
 		5F91075323E7399A00697490 /* View Controllers */ = {
@@ -81,9 +81,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F91073723E716A300697490 /* BeforeUsingCoordinator */ = {
+		5F91073723E716A300697490 /* PROJECT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F91074C23E716B100697490 /* Build configuration list for PBXNativeTarget "BeforeUsingCoordinator" */;
+			buildConfigurationList = 5F91074C23E716B100697490 /* Build configuration list for PBXNativeTarget "PROJECT" */;
 			buildPhases = (
 				5F91073423E716A300697490 /* Sources */,
 				5F91073523E716A300697490 /* Frameworks */,
@@ -93,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = BeforeUsingCoordinator;
-			productName = BeforeUsingCoordinator;
-			productReference = 5F91073823E716A300697490 /* BeforeUsingCoordinator.app */;
+			name = PROJECT;
+			productName = PROJECT;
+			productReference = 5F91073823E716A300697490 /* PROJECT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F91073323E716A300697490 /* Build configuration list for PBXProject "BeforeUsingCoordinator" */;
+			buildConfigurationList = 5F91073323E716A300697490 /* Build configuration list for PBXProject "PROJECT" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F91073723E716A300697490 /* BeforeUsingCoordinator */,
+				5F91073723E716A300697490 /* PROJECT */,
 			);
 		};
 /* End PBXProject section */
@@ -290,13 +290,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9BJ5RNAMJ;
-				INFOPLIST_FILE = BeforeUsingCoordinator/Info.plist;
+				INFOPLIST_FILE = PROJECT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.applause.BeforeUsingCoordinator;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.applause.PROJECT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,13 +309,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9BJ5RNAMJ;
-				INFOPLIST_FILE = BeforeUsingCoordinator/Info.plist;
+				INFOPLIST_FILE = PROJECT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.applause.BeforeUsingCoordinator;
+				PRODUCT_BUNDLE_IDENTIFIER = codes.applause.PROJECT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F91073323E716A300697490 /* Build configuration list for PBXProject "BeforeUsingCoordinator" */ = {
+		5F91073323E716A300697490 /* Build configuration list for PBXProject "PROJECT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F91074A23E716B100697490 /* Debug */,
@@ -334,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F91074C23E716B100697490 /* Build configuration list for PBXNativeTarget "BeforeUsingCoordinator" */ = {
+		5F91074C23E716B100697490 /* Build configuration list for PBXNativeTarget "PROJECT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F91074D23E716B100697490 /* Debug */,

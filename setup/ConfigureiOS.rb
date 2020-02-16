@@ -66,7 +66,7 @@ module Pod
 
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
-        :xcodeproj_path => "templates/ios/Example/BeforeUsingCoordinator.xcodeproj",
+        :xcodeproj_path => "templates/ios/Example/PROJECT.xcodeproj",
         :platform => :ios,
         :remove_demo_project => (keep_demo == :no),
         :prefix => prefix

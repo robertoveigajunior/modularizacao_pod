@@ -19,10 +19,10 @@ module Pod
 
     def run
       @string_replacements = {
-        "BeforeUsingCoordinator_OWNER" => @configurator.user_name,
+        "PROJECT_OWNER" => @configurator.user_name,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
-        "BeforeUsingCoordinator" => @configurator.pod_name,
+        "PROJECT" => @configurator.pod_name,
         "CPD" => @prefix
       }
       replace_internal_project_settings
@@ -38,7 +38,7 @@ module Pod
 
     def add_podspec_metadata
       project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first
-      project_metadata_item.new_file "../BeforeUsingCoordinator.podspec"
+      project_metadata_item.new_file "../PROJECT.podspec"
       project_metadata_item.new_file "../README.md"
       project_metadata_item.new_file "../LICENSE"
     end
@@ -67,8 +67,8 @@ module Pod
       product.remove_from_project
 
       # Remove the actual folder + files for both projects
-      `rm -rf templates/ios/Example/BeforeUsingCoordinator`
-      `rm -rf templates/swift/Example/BeforeUsingCoordinator`
+      `rm -rf templates/ios/Example/PROJECT`
+      `rm -rf templates/swift/Example/PROJECT`
 
       # Replace the Podfile with a simpler one with only one target
       podfile_path = project_folder + "/Podfile"
@@ -89,28 +89,28 @@ RUBY
 
     def rename_files
       # shared schemes have project specific names
-      scheme_path = project_folder + "/BeforeUsingCoordinator.xcodeproj/xcshareddata/xcschemes/"
-      File.rename(scheme_path + "BeforeUsingCoordinator.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
+      scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
+      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
 
       # rename xcproject
-      File.rename(project_folder + "/BeforeUsingCoordinator.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
+      File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
       unless @remove_demo_target
         # change app file prefixes
         ["CPDAppDelegate.h", "CPDAppDelegate.m", "CPDViewController.h", "CPDViewController.m"].each do |file|
-          before = project_folder + "/BeforeUsingCoordinator/" + file
+          before = project_folder + "/PROJECT/" + file
           next unless File.exists? before
 
-          after = project_folder + "/BeforeUsingCoordinator/" + file.gsub("CPD", prefix)
+          after = project_folder + "/PROJECT/" + file.gsub("CPD", prefix)
           File.rename before, after
         end
 
         # rename project related files
-        ["BeforeUsingCoordinator-Info.plist", "BeforeUsingCoordinator-Prefix.pch", "BeforeUsingCoordinator.entitlements"].each do |file|
-          before = project_folder + "/BeforeUsingCoordinator/" + file
+        ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.entitlements"].each do |file|
+          before = project_folder + "/PROJECT/" + file
           next unless File.exists? before
 
-          after = project_folder + "/BeforeUsingCoordinator/" + file.gsub("BeforeUsingCoordinator", @configurator.pod_name)
+          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
           File.rename before, after
         end
       end
@@ -118,8 +118,8 @@ RUBY
     end
 
     def rename_project_folder
-      if Dir.exist? project_folder + "/BeforeUsingCoordinator"
-        File.rename(project_folder + "/BeforeUsingCoordinator", project_folder + "/" + @configurator.pod_name)
+      if Dir.exist? project_folder + "/PROJECT"
+        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
       end
     end
 

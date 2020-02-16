@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import BeforeUsingCoordinator
+import PROJECT
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

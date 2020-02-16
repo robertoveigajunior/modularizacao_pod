@@ -23,7 +23,7 @@ module Pod
 
         break if answer.length > 0
 
-        print "\nVocê precisa fornecer uma resposta."
+        print "\nYou need to provide an answer."
       end
       answer
     end
@@ -49,8 +49,8 @@ module Pod
         @message_bank.show_prompt
         answer = gets.downcase.chomp
 
-        answer = "sim" if answer == "s"
-        answer = "não" if answer == "s"
+        answer = "yes" if answer == "y"
+        answer = "no" if answer == "n"
 
         # default to first answer
         if answer == ""
@@ -60,11 +60,43 @@ module Pod
 
         break if possible_answers.map { |a| a.downcase }.include? answer
 
-        print "\nPossíveis respostas são ["
+        print "\nPossible answers are ["
         print_info.call
       end
 
       answer
+    end
+
+    def run
+      @message_bank.welcome_message
+
+      platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
+
+      case platform
+        when :macos
+          ConfigureMacOSSwift.perform(configurator: self)
+        when :ios
+          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
+          case framework
+            when :swift
+              ConfigureSwift.perform(configurator: self)
+
+            when :objc
+              ConfigureIOS.perform(configurator: self)
+          end
+      end
+
+      replace_variables_in_files
+      clean_template_files
+      rename_template_files
+      add_pods_to_podfile
+      customise_prefix
+      rename_classes_folder
+      ensure_carthage_compatibility
+      reinitialize_git_repo
+      run_pod_install
+
+      @message_bank.farewell_message
     end
 
     #----------------------------------------#
@@ -74,7 +106,7 @@ module Pod
     end
 
     def run_pod_install
-      puts "\nExecutando " + "pod install".magenta + " em sua nova Biblioteca."
+      puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
       Dir.chdir("Example") do
@@ -82,7 +114,7 @@ module Pod
       end
 
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
-      `git commit -m "Commit inicial"`
+      `git commit -m "Initial commit"`
     end
 
     def clean_template_files

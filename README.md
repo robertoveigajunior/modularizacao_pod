@@ -31,7 +31,7 @@ Configurando o podspec, ele é construido automaticamente quando o POD é criado
 Atenção para as seguintes exemplos de códigos dentro do podspec.
 
 ``` 
-s.source_files = 'teste/Classes/**/*' 
+s.source_files = 'teste/Classes/**/*.swift' 
 ```
 
 ``` 

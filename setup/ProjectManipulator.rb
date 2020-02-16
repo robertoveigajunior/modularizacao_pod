@@ -76,7 +76,7 @@ module Pod
 use_frameworks!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
-  
+
   ${INCLUDED_PODS}
 end
 RUBY
@@ -89,11 +89,11 @@ RUBY
 
     def rename_files
       # shared schemes have project specific names
-      scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
-      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
+      scheme_path = project_folder + "AfterUsingCoordinator/AfterUsingCoordinator.xcodeproj/xcshareddata/xcschemes/"
+      File.rename(scheme_path + "AfterUsingCoordinator.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
 
       # rename xcproject
-      File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
+      File.rename(project_folder + "AfterUsingCoordinator/AfterUsingCoordinator.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
       unless @remove_demo_target
         # change app file prefixes
@@ -110,7 +110,7 @@ RUBY
           before = project_folder + "/PROJECT/" + file
           next unless File.exists? before
 
-          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
+          after = project_folder + "/AfterUsingCoordinator/" + file.gsub("AfterUsingCoordinator", @configurator.pod_name)
           File.rename before, after
         end
       end
@@ -118,8 +118,8 @@ RUBY
     end
 
     def rename_project_folder
-      if Dir.exist? project_folder + "/PROJECT"
-        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+      if Dir.exist? project_folder + "/AfterUsingCoordinator"
+        File.rename(project_folder + "/AfterUsingCoordinator", project_folder + "/" + @configurator.pod_name)
       end
     end
 

@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  PROJECT
+//  BeforeUsingCoordinator
 //
-//  Created by PROJECT_OWNER on TODAYS_DATE.
-//  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
+//  Created by BeforeUsingCoordinator_OWNER on TODAYS_DATE.
+//  Copyright (c) TODAYS_YEAR BeforeUsingCoordinator_OWNER. All rights reserved.
 //
 
 import Cocoa

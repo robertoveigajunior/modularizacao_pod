@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ED83F67720348A760038D96B"
-               BuildableName = "PROJECT_Example.app"
-               BlueprintName = "PROJECT_Example"
-               ReferencedContainer = "container:PROJECT.xcodeproj">
+               BuildableName = "BeforeUsingCoordinator_Example.app"
+               BlueprintName = "BeforeUsingCoordinator_Example"
+               ReferencedContainer = "container:BeforeUsingCoordinator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ED83F68920348A760038D96B"
-               BuildableName = "PROJECT_Tests.xctest"
-               BlueprintName = "PROJECT_Tests"
-               ReferencedContainer = "container:PROJECT.xcodeproj">
+               BuildableName = "BeforeUsingCoordinator_Tests.xctest"
+               BlueprintName = "BeforeUsingCoordinator_Tests"
+               ReferencedContainer = "container:BeforeUsingCoordinator.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED83F67720348A760038D96B"
-            BuildableName = "PROJECT_Example.app"
-            BlueprintName = "PROJECT_Example"
-            ReferencedContainer = "container:PROJECT.xcodeproj">
+            BuildableName = "BeforeUsingCoordinator_Example.app"
+            BlueprintName = "BeforeUsingCoordinator_Example"
+            ReferencedContainer = "container:BeforeUsingCoordinator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED83F67720348A760038D96B"
-            BuildableName = "PROJECT_Example.app"
-            BlueprintName = "PROJECT_Example"
-            ReferencedContainer = "container:PROJECT.xcodeproj">
+            BuildableName = "BeforeUsingCoordinator_Example.app"
+            BlueprintName = "BeforeUsingCoordinator_Example"
+            ReferencedContainer = "container:BeforeUsingCoordinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,9 +87,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED83F67720348A760038D96B"
-            BuildableName = "PROJECT_Example.app"
-            BlueprintName = "PROJECT_Example"
-            ReferencedContainer = "container:PROJECT.xcodeproj">
+            BuildableName = "BeforeUsingCoordinator_Example.app"
+            BlueprintName = "BeforeUsingCoordinator_Example"
+            ReferencedContainer = "container:BeforeUsingCoordinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

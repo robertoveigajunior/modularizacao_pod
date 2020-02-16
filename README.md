@@ -17,7 +17,7 @@ $ pod lib create MyLib
 Caso necessário crie com um template adicionando --template-url=URL no comando.
 
 ```
-$ pod lib create [MyLib] --template-url=[URL]
+$ pod lib create MyLib --template-url=https://github.com/robertoveigajunior/modularizacao_pod.git
 ```
 
 Criar bibliotecas como dependências do projeto principal, simplifica e encapsula as funcionalidades. 

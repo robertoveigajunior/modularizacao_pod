@@ -1,7 +1,5 @@
 # Modularização iOS
 
-Modularização iOS
-
 Basicamente os aplicativos de grande porte contem muitos fluxos e telas ou até mesmo arquivos descontinuados, desta forma pesado para rodar testes ou até mesmo na hora do build.
 
 Quem aqui já teve este problema ou já ficou sabendo de alguém que estava chateado com esse problema?

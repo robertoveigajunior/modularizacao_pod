@@ -89,11 +89,11 @@ RUBY
 
     def rename_files
       # shared schemes have project specific names
-      scheme_path = project_folder + "AfterUsingCoordinator/AfterUsingCoordinator.xcodeproj/xcshareddata/xcschemes/"
+      scheme_path = project_folder + "/AfterUsingCoordinator/AfterUsingCoordinator.xcodeproj/xcshareddata/xcschemes/"
       File.rename(scheme_path + "AfterUsingCoordinator.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
 
       # rename xcproject
-      File.rename(project_folder + "AfterUsingCoordinator/AfterUsingCoordinator.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
+      File.rename(project_folder + "/AfterUsingCoordinator/AfterUsingCoordinator.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
       unless @remove_demo_target
         # change app file prefixes

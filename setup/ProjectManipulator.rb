@@ -22,7 +22,7 @@ module Pod
         "PROJECT_OWNER" => @configurator.user_name,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
-        "PROJECT" => @configurator.pod_name,
+        "AfterUsingCoordinator" => @configurator.pod_name,
         "CPD" => @prefix
       }
       replace_internal_project_settings
@@ -38,7 +38,7 @@ module Pod
 
     def add_podspec_metadata
       project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first
-      project_metadata_item.new_file "../PROJECT.podspec"
+      project_metadata_item.new_file "../AfterUsingCoordinator.podspec"
       project_metadata_item.new_file "../README.md"
       project_metadata_item.new_file "../LICENSE"
     end

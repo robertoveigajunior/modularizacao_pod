@@ -22,7 +22,7 @@ module Pod
         "PROJECT_OWNER" => @configurator.user_name,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
-        "AfterUsingCoordinator" => @configurator.pod_name,
+        "PROJECT" => @configurator.pod_name,
         "CPD" => @prefix
       }
       replace_internal_project_settings
@@ -38,7 +38,7 @@ module Pod
 
     def add_podspec_metadata
       project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first
-      project_metadata_item.new_file "../templates/swift/Example/AfterUsingCoordinator" + @configurator.pod_name  + ".podspec"
+      project_metadata_item.new_file "../" + @configurator.pod_name  + ".podspec"
       project_metadata_item.new_file "../README.md"
       project_metadata_item.new_file "../LICENSE"
     end
@@ -89,7 +89,7 @@ RUBY
 
     def rename_project_folder
       if Dir.exist? project_folder + "/AfterUsingCoordinator/"
-        File.rename(project_folder + @configurator.pod_name)
+        File.rename(project_folder + "/AfterUsingCoordinator", project_folder + "/" + @configurator.pod_name)
       end
     end
 

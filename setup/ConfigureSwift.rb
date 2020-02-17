@@ -40,13 +40,13 @@ module Pod
           end
       end
 
-      # Pod::ProjectManipulator.new({
-      #   :configurator => @configurator,
-      #   :xcodeproj_path => "templates/swift/Example/AfterUsingCoordinator.xcodeproj",
-      #   :platform => :ios,
-      #   :remove_demo_project => (keep_demo == :no),
-      #   :prefix => ""
-      # }).run
+      Pod::ProjectManipulator.new({
+        :configurator => @configurator,
+        :xcodeproj_path => "templates/swift/Example/AfterUsingCoordinator.xcodeproj",
+        :platform => :ios,
+        :remove_demo_project => (keep_demo == :no),
+        :prefix => ""
+      }).run
 
       `mv ./templates/swift/* ./`
 

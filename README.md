@@ -4,7 +4,7 @@ Basicamente os aplicativos de grande porte contem muitos fluxos e telas ou até 
 
 Quem aqui já teve este problema ou já ficou sabendo de alguém que estava chateado com esse problema?
 
-Troucemos aqui uma solução bem bacana!
+Trouxemos aqui uma solução bem bacana!
 
 Existem algumas formas de resolver isso, uma delas é bem conhecia como POD, que é administrado por um gerenciador de dependências chamado COCOAPODS, utilizado em mais de 3 milhões de apps no mundo. 
 

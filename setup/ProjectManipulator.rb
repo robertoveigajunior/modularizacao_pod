@@ -3,38 +3,7 @@ require 'xcodeproj'
 module Pod
 
   class ProjectManipulator
-    attr_reader :configurator, :xcodeproj_path, :platform, :remove_demo_target, :string_replacements, :prefix
-
-    def self.perform(options)
-      new(options).perform
-    end
-
-    def initialize(options)
-      @xcodeproj_path = options.fetch(:xcodeproj_path)
-      @configurator = options.fetch(:configurator)
-      @platform = options.fetch(:platform)
-      @remove_demo_target = options.fetch(:remove_demo_project)
-      @prefix = options.fetch(:prefix)
-    end
-
-    def run
-      @string_replacements = {
-        "PROJECT_OWNER" => @configurator.user_name,
-        "TODAYS_DATE" => @configurator.date,
-        "TODAYS_YEAR" => @configurator.year,
-        "PROJECT" => @configurator.pod_name,
-        "CPD" => @prefix
-      }
-      replace_internal_project_settings
-
-      @project = Xcodeproj::Project.open(@xcodeproj_path)
-      add_podspec_metadata
-      remove_demo_project if @remove_demo_target
-      @project.save
-
-      rename_files
-      rename_project_folder
-    end
+    
   end
 end
 

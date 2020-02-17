@@ -25,7 +25,7 @@ module Pod
       }).run
 
       `mv ./templates/swift/* ./`
-      `mv ./templates/mvvmc Pod/Classes/`
+      `mv ./templates/mvvmc/* Pod/Classes/`
 
       # The Podspec should be 8.0 instead of 7.0
       text = File.read("NAME.podspec")

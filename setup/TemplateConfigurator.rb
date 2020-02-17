@@ -23,7 +23,7 @@ module Pod
 
         break if answer.length > 0
 
-        print "\nYou need to provide an answer."
+        print "\nResposta obrigatória!"
       end
       answer
     end
@@ -49,8 +49,9 @@ module Pod
         @message_bank.show_prompt
         answer = gets.downcase.chomp
 
-        answer = "yes" if answer == "y"
-        answer = "no" if answer == "n"
+        answer = "sim" if answer == "s"
+        answer = "não" if answer == "n"
+        answer = "nao" if answer == "n"
 
         # default to first answer
         if answer == ""
@@ -60,7 +61,7 @@ module Pod
 
         break if possible_answers.map { |a| a.downcase }.include? answer
 
-        print "\nPossible answers are ["
+        print "\nPossíveis respostas ["
         print_info.call
       end
 
@@ -70,13 +71,13 @@ module Pod
     def run
       @message_bank.welcome_message
 
-      platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
+      platform = self.ask_with_answers("Qual plataforma você prefere", ["iOS", "macOS"]).to_sym
 
       case platform
         when :macos
           ConfigureMacOSSwift.perform(configurator: self)
         when :ios
-          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
+          framework = self.ask_with_answers("Qual linguagem você vai utilizar", ["Swift", "ObjC"]).to_sym
           case framework
             when :swift
               ConfigureSwift.perform(configurator: self)
@@ -106,7 +107,7 @@ module Pod
     end
 
     def run_pod_install
-      puts "\nRunning " + "pod install".magenta + " on your new library."
+      puts "\nRunning " + "pod install".magenta + " em sua biblioteca."
       puts ""
 
       Dir.chdir("Example") do

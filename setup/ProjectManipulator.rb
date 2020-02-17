@@ -35,6 +35,8 @@ module Pod
       rename_files
       rename_project_folder
     end
+  end
+end
 
     # def add_podspec_metadata
     #   project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first

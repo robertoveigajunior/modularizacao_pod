@@ -79,33 +79,33 @@ module Pod
 #
 #   ${INCLUDED_PODS}
 # end
-RUBY
-      File.open(podfile_path, "w") { |file| file.puts podfile_text }
-    end
-
-    def project_folder
-      File.dirname @xcodeproj_path
-    end
-
-    def rename_project_folder
-      if Dir.exist? project_folder + "/AfterUsingCoordinator/"
-        File.rename(project_folder + "/AfterUsingCoordinator", project_folder + "/" + @configurator.pod_name)
-      end
-    end
-
-    def replace_internal_project_settings
-      Dir.glob(project_folder + "/**/**/**/**").each do |name|
-        next if Dir.exists? name
-        text = File.read(name)
-
-        for find, replace in @string_replacements
-            text = text.gsub(find, replace)
-        end
-
-        File.open(name, "w") { |file| file.puts text }
-      end
-    end
-
-  end
+# RUBY
+      # File.open(podfile_path, "w") { |file| file.puts podfile_text }
+  #   end
+  #
+  #   def project_folder
+  #     File.dirname @xcodeproj_path
+  #   end
+  #
+  #   def rename_project_folder
+  #     if Dir.exist? project_folder + "/AfterUsingCoordinator/"
+  #       File.rename(project_folder + "/AfterUsingCoordinator", project_folder + "/" + @configurator.pod_name)
+  #     end
+  #   end
+  #
+  #   def replace_internal_project_settings
+  #     Dir.glob(project_folder + "/**/**/**/**").each do |name|
+  #       next if Dir.exists? name
+  #       text = File.read(name)
+  #
+  #       for find, replace in @string_replacements
+  #           text = text.gsub(find, replace)
+  #       end
+  #
+  #       File.open(name, "w") { |file| file.puts text }
+  #     end
+  #   end
+  #
+  # end
 
 # end

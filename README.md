@@ -1,8 +1,6 @@
 # Modularização iOS
 
-Basicamente os aplicativos de grande porte contem muitos fluxos e telas ou até mesmo arquivos descontinuados, desta forma pesado para rodar testes ou até mesmo na hora do build.
-
-Quem aqui já teve este problema ou já ficou sabendo de alguém que estava chateado com esse problema?
+Basicamente os aplicativos com muitas telas e fluxos complexos e ou até mesmo arquivos descontinuados esquecidos no app, desta forma pesado para rodar testes ou até mesmo na hora do build.
 
 Trouxemos aqui uma solução bem bacana!
 
@@ -14,13 +12,13 @@ Primeiro comando para criar o seu POD:
 $ pod lib create MyLib
 ```
 
-Caso necessário crie com um template adicionando --template-url=URL no comando.
+Caso necessário adicionae um template adicionando --template-url=URL no comando.
 
 ```
 $ pod lib create MyLib --template-url=https://github.com/robertoveigajunior/modularizacao_pod.git
 ```
 
-Criar bibliotecas como dependências do projeto principal, simplifica e encapsula as funcionalidades. 
+Criar bibliotecas como SDKs, jornadas de uso e fluxos do app como dependências de um projeto base, simplifica e encapsula as funcionalidades. 
 
 Vamos construir um simples projeto contendo um app principal que utiliza componentes desenvolvidos de maneira desacoplada.
 

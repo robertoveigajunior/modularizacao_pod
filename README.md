@@ -63,9 +63,7 @@ pod spec lint
 
 A diferença entre eles é que o [pod lib lint] não acessa a rede, enquanto o [pod spec lint] verifica o repositório externo e a tag associada.
 
-Se você estiver implantando uma biblioteca de código aberto no tronco, não poderá receber avisos do CocoaPods.
-
-Se você estiver implantando em um repositório de especificações particular, precisará já ter adicionado esse repositório. Consulte os guias em repositórios de especificações particulares para configurar isso. Se você estiver implantando em um repositório privado existente, use este comando para implantar:
+Se você estiver implantando em um repositório privado existente, use este comando para implantar:
 
 ```
 pod repo push SPEC_REPO *.podspec --verbose
